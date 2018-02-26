@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-25T08:36:39.299Z</updated>
+  <updated>2018-02-26T12:59:23.020Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c++继承之虚继承</title>
+    <link href="http://yoursite.com/2018/02/26/c-%E7%BB%A7%E6%89%BF%E4%B9%8B%E8%99%9A%E7%BB%A7%E6%89%BF/"/>
+    <id>http://yoursite.com/2018/02/26/c-继承之虚继承/</id>
+    <published>2018-02-26T12:43:12.000Z</published>
+    <updated>2018-02-26T12:59:23.020Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/02/26/c-继承之虚继承/index.jpg" alt="Senju Tobirama"></p><h1 id="虚继承"><a href="#虚继承" class="headerlink" title="虚继承"></a>虚继承</h1><h2 id="存在的理由"><a href="#存在的理由" class="headerlink" title="存在的理由"></a>存在的理由</h2><blockquote><p>存在即合理</p></blockquote><p>虽然我们相信这句话，但是为什么合理呢？是什么促使它存在的呢？<br>我们引出一个概念，<em>菱形继承</em><br>什么是菱形继承：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class A  //大小为4</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int a;</span><br><span class="line">&#125;;</span><br><span class="line">class B : public A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int b;</span><br><span class="line">&#125;;</span><br><span class="line">class C : public A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int c;</span><br><span class="line">&#125;;</span><br><span class="line">class D :public B, public C</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int d;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><p>我们画出它的类图，会发现是一个菱形<br>当我们实例化D类,对象是d，并且调用d.a;<br>那么会出现<strong><em>二义性</em></strong>的问题。<br>通过引入虚函数，可以解决以下问题：</p><ul><li>二义性问题</li><li>浪费存储空间</li></ul><h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><ul><li>每个虚继承的子类都有一个虚基类指针（占用一个指针的存储空间，4字节）和虚基类表（不占用类对象的存储空间）</li><li>虚基类依旧会在子类里面存在拷贝，只是仅仅最多存在一份而已，并不是不在子类里面了</li><li>当虚继承的子类被当做父类继承时，虚基类指针也会被继承。</li><li>实际上，vbptr指的是虚基类表指针（virtual base table pointer），该指针指向了一个虚基类表（virtual table），虚表中记录了虚基类与本类的偏移地址；通过偏移地址，这样就找到了虚基类成员，而虚继承也不用像普通多继承那样维持着公共基类（虚基类）的两份同样的拷贝，节省了存储空间。</li><li>我的理解是通过偏移地址，找到虚基类成员，如果两个父类的父类是一个类，类似于B的父类是A，C的父类是A，B，C父类相同，那么我们不需要两份相同的继承。</li></ul><h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int a;</span><br><span class="line">&#125;;</span><br><span class="line">class B :virtual public A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int b;</span><br><span class="line">&#125;;</span><br><span class="line">class C :virtual public A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int c;</span><br><span class="line">&#125;;</span><br><span class="line">class D :public B, public C</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    int d;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>注意virtual的位置。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/02/26/c-继承之虚继承/index.jpg&quot; alt=&quot;Senju Tobirama&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;虚继承&quot;&gt;&lt;a href=&quot;#虚继承&quot; class=&quot;headerlink&quot; title=&quot;虚继承&quot;&gt;&lt;/a&gt;虚继承&lt;/h
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="c++" scheme="http://yoursite.com/categories/Languages/c/"/>
+    
+    
+      <category term="c++继承" scheme="http://yoursite.com/tags/c-%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>c++继承之多重继承和多继承</title>
