@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-26T12:59:23.020Z</updated>
+  <updated>2018-02-26T15:42:11.640Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3月计划</title>
+    <link href="http://yoursite.com/2018/02/26/3%E6%9C%88%E8%AE%A1%E5%88%92/"/>
+    <id>http://yoursite.com/2018/02/26/3月计划/</id>
+    <published>2018-02-26T15:27:43.000Z</published>
+    <updated>2018-02-26T15:42:11.640Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/02/26/3月计划/index.jpeg" alt="刚吧爹,Jamence"></p><h2 id="需要准备的事情："><a href="#需要准备的事情：" class="headerlink" title="需要准备的事情："></a>需要准备的事情：</h2><ul><li>蓝桥杯<br>时间是2018年4月1日星期天</li><li>天梯赛<br>时间是2018年3月31日13:00——16:00</li><li>考研<h2 id="安排"><a href="#安排" class="headerlink" title="安排"></a>安排</h2></li><li>刷团队设计天梯赛往年的题目（认真刷level2的题目，lever3的题目写不来，level2的题目可以争取一下）</li><li>重新刷一遍杭电2000到2100的题目，并加以总结</li><li>刷一遍历届试题（<strong><em>重点刷这个</em></strong>）</li><li>算法归纳总结：</li></ul><h5 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h5><ul><li style="list-style: none"><input type="checkbox"> dfs</li><li style="list-style: none"><input type="checkbox"> bfs</li><li style="list-style: none"><input type="checkbox"> 枚举</li></ul><h5 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h5><ul><li style="list-style: none"><input type="checkbox"> 贪心</li></ul><h5 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h5><ul><li style="list-style: none"><input type="checkbox"> 简单DP（找规律）</li><li style="list-style: none"><input type="checkbox"> 背包</li><li style="list-style: none"><input type="checkbox"> 树形DP</li><li style="list-style: none"><input type="checkbox"> 数位DP</li></ul><h5 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h5><ul><li style="list-style: none"><input type="checkbox"> 二叉树相关</li><li style="list-style: none"><input type="checkbox"> 优先队列相关</li><li style="list-style: none"><input type="checkbox"> 并查集</li><li style="list-style: none"><input type="checkbox"> 线段树</li></ul><h5 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h5><ul><li style="list-style: none"><input type="checkbox"> 最短路算法</li><li style="list-style: none"><input type="checkbox"> 最小生成树</li><li style="list-style: none"><input type="checkbox"> 拓扑排序</li></ul><h5 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h5><ul><li style="list-style: none"><input type="checkbox"> gcd</li><li style="list-style: none"><input type="checkbox"> 扩展gcd</li><li style="list-style: none"><input type="checkbox"> 素数相关</li><li style="list-style: none"><input type="checkbox"> 逆元</li><li style="list-style: none"><input type="checkbox"> 斯特林近似</li><li style="list-style: none"><input type="checkbox"> 快速幂</li><li style="list-style: none"><input type="checkbox"> 矩阵快速幂</li><li style="list-style: none"><input type="checkbox"> 卡塔兰数</li><li style="list-style: none"><input type="checkbox"> 一元线性同余方程</li></ul><h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><ul><li style="list-style: none"><input type="checkbox"> kmp</li><li style="list-style: none"><input type="checkbox"> 字符串距离</li></ul><h5 id="代数几何"><a href="#代数几何" class="headerlink" title="代数几何"></a>代数几何</h5><ul><li style="list-style: none"><input type="checkbox"> 凸包</li><li style="list-style: none"><input type="checkbox"> 判断三点方向</li><li style="list-style: none"><input type="checkbox"> 多边形面积</li><li style="list-style: none"><input type="checkbox"> 最小点对</li><li style="list-style: none"><input type="checkbox"> 四点共面</li><li style="list-style: none"><input type="checkbox"> 多边形重心</li></ul><h5 id="奇技淫巧"><a href="#奇技淫巧" class="headerlink" title="奇技淫巧"></a>奇技淫巧</h5><ul><li style="list-style: none"><input type="checkbox"> 二分查找</li><li style="list-style: none"><input type="checkbox"> 尺取法</li><li style="list-style: none"><input type="checkbox"> 随机化算法</li></ul><h5 id="大数算法（蓝桥杯报了c-组，坑呀）"><a href="#大数算法（蓝桥杯报了c-组，坑呀）" class="headerlink" title="大数算法（蓝桥杯报了c++组，坑呀）"></a>大数算法（蓝桥杯报了c++组，坑呀）</h5><ul><li style="list-style: none"><input type="checkbox"> 加</li><li style="list-style: none"><input type="checkbox"> 减</li><li style="list-style: none"><input type="checkbox"> 乘</li></ul><h5 id="博弈"><a href="#博弈" class="headerlink" title="博弈"></a>博弈</h5><ul><li style="list-style: none"><input type="checkbox"> 简单博弈（三种）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/02/26/3月计划/index.jpeg&quot; alt=&quot;刚吧爹,Jamence&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;需要准备的事情：&quot;&gt;&lt;a href=&quot;#需要准备的事情：&quot; class=&quot;headerlink&quot; title=&quot;需要准备的事情：&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Lifes" scheme="http://yoursite.com/categories/Lifes/"/>
+    
+    
+      <category term="计划" scheme="http://yoursite.com/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>c++继承之虚继承</title>
