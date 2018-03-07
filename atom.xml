@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-01T07:38:12.145Z</updated>
+  <updated>2018-03-07T00:29:04.802Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>并查集</title>
+    <link href="http://yoursite.com/2018/03/07/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    <id>http://yoursite.com/2018/03/07/并查集/</id>
+    <published>2018-03-07T00:06:19.000Z</published>
+    <updated>2018-03-07T00:29:04.802Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/07/并查集/index.jpg" alt="Uchiha Itachi"></p><h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><h2 id="概念简介"><a href="#概念简介" class="headerlink" title="概念简介"></a>概念简介</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p><ul><li>Find：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li><li>Union：将两个子集合并成同一个集合。</li></ul><p>由于支持这两种操作，一个不相交集也常被称为联合-查找数据结构（union-find data structure）或合并-查找集合（merge-find set）。其他的重要方法，MakeSet，用于建立单元素集合。有了这些方法，许多经典的划分问题可以被解决。</p><p>为了更加精确的定义这些方法，需要定义如何表示集合。一种常用的策略是为每个集合选定一个固定的元素，称为代表，以表示整个集合。接着，Find(x) 返回 x 所属集合的代表，而 Union 使用两个集合的代表作为参数。</p><h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>用集合中的某个元素来代表这个集合，该元素称为集合的代表元。<br>一个集合内的所有元素组织成以代表元为根的树形结构。<br>在并查集算法中，合并操作是将该元素所在树连接在被合并元素所在树上。<br>对于查找操作，即是路经查找到树根，确定代表元的过程。</p><blockquote><p>判断两个元素是否属于同一集合，只需要看他们的代表元是否相同即可。</p></blockquote><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>存在两种优化算法：</p><ul><li>按秩合并：使包含较少结点的树根指向包含较多结点的树根。</li><li>路径压缩：使路径查找上的每个点都直接指向根结点。<h3 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h3>是一种在执行“查找”时扁平化树结构的方法。关键在于在路径上的每个节点都可以直接连接到根上；他们都有同样的表示方法。为了达到这样的效果，Find递归地经过树，改变每一个节点的引用到根节点。得到的树将更加扁平，为以后直接或者间接引用节点的操作加速。<br>关键代码在find<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int find(int u)&#123;</span><br><span class="line">    if(u==f[u])return u;</span><br><span class="line">    f[u]=find(f[u]);</span><br><span class="line">    return f[u];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h2 id="完整代码描述"><a href="#完整代码描述" class="headerlink" title="完整代码描述"></a>完整代码描述</h2><ul><li>递归版本(存在溢出的情况)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int f[maxn];</span><br><span class="line">int find(int u)&#123;</span><br><span class="line">    if(u==f[u])return u;</span><br><span class="line">    f[u]=find(f[u]);</span><br><span class="line">    return f[u];</span><br><span class="line">&#125;</span><br><span class="line">void join(int u,int v)&#123;</span><br><span class="line">    int fu=find(u);</span><br><span class="line">    int fv=find(v);</span><br><span class="line">    if(fu!=fv)&#123;</span><br><span class="line">        f[fu]=fv;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>非递归版本</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">int pre[1000 ];</span><br><span class="line">void ini()//初始化，表示每个结点的父节点是其本身</span><br><span class="line">&#123;</span><br><span class="line">for(int i=0;i&lt;maxn;i++)</span><br><span class="line">pre[i]=i;</span><br><span class="line">&#125;</span><br><span class="line">int find(int x)//查找根节点</span><br><span class="line">&#123;</span><br><span class="line">    int r=x;</span><br><span class="line">    while ( pre[r] != r )//返回根节点 r</span><br><span class="line">          r=pre[r];</span><br><span class="line"></span><br><span class="line">    int i=x,j;</span><br><span class="line">    while(i!=r) //路径压缩</span><br><span class="line">    &#123;</span><br><span class="line">         j = pre[i]; //在改变上级之前用临时变量  j 记录下他的值</span><br><span class="line">         pre[i]= r ; //把上级改为根节点</span><br><span class="line">         i=j;</span><br><span class="line">    &#125;</span><br><span class="line">    return r ;</span><br><span class="line">&#125;</span><br><span class="line">void join(int x,int y)//判断x y是否连通，</span><br><span class="line">//如果已经连通，就不用管了 如果不连通，就把它们所在的连通分支合并起,</span><br><span class="line">&#123;</span><br><span class="line">    int fx=find(x),fy=find(y);</span><br><span class="line">    if(fx!=fy)</span><br><span class="line">        pre[fx]=fy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/07/并查集/index.jpg&quot; alt=&quot;Uchiha Itachi&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;并查集&quot;&gt;&lt;a href=&quot;#并查集&quot; class=&quot;headerlink&quot; title=&quot;并查集&quot;&gt;&lt;/a&gt;并查集&lt;/h1&gt;&lt;h2 
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
+    
+    
+      <category term="并查集" scheme="http://yoursite.com/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+  </entry>
   
   <entry>
     <title>最短路算法</title>
