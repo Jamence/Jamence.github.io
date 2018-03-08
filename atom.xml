@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-07T00:29:04.802Z</updated>
+  <updated>2018-03-08T15:27:11.491Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>考研规划</title>
+    <link href="http://yoursite.com/2018/03/08/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/"/>
+    <id>http://yoursite.com/2018/03/08/考研规划/</id>
+    <published>2018-03-08T11:30:23.000Z</published>
+    <updated>2018-03-08T15:27:11.491Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/08/考研规划/index.gif" alt="Uzumaki Naruto "></p><h1 id="高数："><a href="#高数：" class="headerlink" title="高数："></a>高数：</h1><table><thead><tr><th>阶段</th><th style="text-align:center">复习教材以及习题</th><th style="text-align:right">时间</th></tr></thead><tbody><tr><td>基础巩固</td><td style="text-align:center">数学教材（高数概率论线代）+张宇36讲</td><td style="text-align:right">3-&gt;6月</td></tr></tbody></table><ul><li>基础巩固<br>数学根据去年（2018年）大纲来复习书上的内容<br>张宇36讲配套教材来吃透教材，形成知识链<br>不要<strong><em>急</em></strong>，时间来得及</li></ul><h1 id="英语："><a href="#英语：" class="headerlink" title="英语："></a>英语：</h1><table><thead><tr><th>阶段</th><th style="text-align:center">复习教材以及习题</th><th style="text-align:right">时间</th></tr></thead><tbody><tr><td>基础巩固</td><td style="text-align:center">单词+阅读+语法</td><td style="text-align:right">3-&gt;6月</td></tr></tbody></table><ul><li>基础巩固<br>单词：恋练有词，希望可以过多边单词书<br>阅读：我还是使用扇贝阅读，阅读需要配套翻译<br>语法：刘晓艳长难句<br>不要急，基础是重点，高楼平地起，没有基础，便没有提高</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/08/考研规划/index.gif&quot; alt=&quot;Uzumaki Naruto &quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;高数：&quot;&gt;&lt;a href=&quot;#高数：&quot; class=&quot;headerlink&quot; title=&quot;高数：&quot;&gt;&lt;/a&gt;高数：&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Lifes" scheme="http://yoursite.com/categories/Lifes/"/>
+    
+    
+      <category term="考研" scheme="http://yoursite.com/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索小结</title>
+    <link href="http://yoursite.com/2018/03/08/%E6%90%9C%E7%B4%A2%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/03/08/搜索小结/</id>
+    <published>2018-03-07T16:05:08.000Z</published>
+    <updated>2018-03-07T16:05:08.569Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>拓扑排序</title>
+    <link href="http://yoursite.com/2018/03/08/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/"/>
+    <id>http://yoursite.com/2018/03/08/拓扑排序/</id>
+    <published>2018-03-07T16:04:36.000Z</published>
+    <updated>2018-03-07T16:04:36.175Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最小生成树</title>
+    <link href="http://yoursite.com/2018/03/08/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
+    <id>http://yoursite.com/2018/03/08/最小生成树/</id>
+    <published>2018-03-07T16:03:34.000Z</published>
+    <updated>2018-03-08T15:28:40.338Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/08/最小生成树/index.jpg" alt="Uchiha Itachi"></p><h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>一个有 n 个结点的连通图的生成树是原图的极小连通子图，且包含原图中的所有 n 个结点，并且有保持图连通的最少的边。 最小生成树可以用kruskal（克鲁斯卡尔）算法或prim（普里姆）算法求出。简言之就是在一个连通图中找出一些边使得所有节点联通。</p><h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>虽然有很多可以实现最小生成树的算法，我们只讨论Kruskal算法。</p><h3 id="Kruskal（克鲁斯科尔算法）"><a href="#Kruskal（克鲁斯科尔算法）" class="headerlink" title="Kruskal（克鲁斯科尔算法）"></a>Kruskal（克鲁斯科尔算法）</h3><p>该算法算是贪心算法的引用</p><h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ul><li>新建图G，G中拥有原图中相同的节点，但没有边</li><li>将原图中所有的边按权值从小到大排序</li><li>从权值最小的边开始，如果这条边连接的两个节点于图G中不在同一个连通分量中，则添加这条边到图G中</li><li>重复3，直至图G中所有的节点都在同一个连通分量中<h2 id="代码描述"><a href="#代码描述" class="headerlink" title="代码描述"></a>代码描述</h2>我们间接通过并查集来实现判断是否两个节点存在于同一个连通分量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">int f[maxn];</span><br><span class="line">int find(int u)&#123;</span><br><span class="line">    if(u==f[u])return u;</span><br><span class="line">    f[u]=find(f[u]);</span><br><span class="line">    return f[u];</span><br><span class="line">&#125;</span><br><span class="line">void join(int u,int v)&#123;</span><br><span class="line">    int fu=find(u);</span><br><span class="line">    int fv=find(v);</span><br><span class="line">    if(fu!=fv)&#123;</span><br><span class="line">        f[fu]=fv;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">struct edge&#123;</span><br><span class="line">    int from,to,cost;</span><br><span class="line">    friend bool operator &lt;(edge a,edge b)&#123;</span><br><span class="line">        return a.cost&lt;b.cost;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;Ed[maxn];</span><br><span class="line">int V,E;</span><br><span class="line">int kruskal()&#123;</span><br><span class="line">    sort(Ed,Ed+E);</span><br><span class="line">    iniuni(V);</span><br><span class="line">    int res=0;</span><br><span class="line">    for(int i=0;i&lt;E;i++)&#123;</span><br><span class="line">        edge e=Ed[i];</span><br><span class="line">        int fu=find(Ed[i].from);</span><br><span class="line">        int fv=find(Ed[i].to);</span><br><span class="line">        if(fu!=fv)&#123;</span><br><span class="line">            join(e.from,e.to);</span><br><span class="line">            res+=e.cost;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/08/最小生成树/index.jpg&quot; alt=&quot;Uchiha Itachi&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;最小生成树&quot;&gt;&lt;a href=&quot;#最小生成树&quot; class=&quot;headerlink&quot; title=&quot;最小生成树&quot;&gt;&lt;/a&gt;最小生成
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
+    
+    
+      <category term="最小生成树" scheme="http://yoursite.com/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>并查集</title>
     <link href="http://yoursite.com/2018/03/07/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     <id>http://yoursite.com/2018/03/07/并查集/</id>
     <published>2018-03-07T00:06:19.000Z</published>
-    <updated>2018-03-07T00:29:04.802Z</updated>
+    <updated>2018-03-07T00:32:19.880Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/2018/03/07/并查集/index.jpg" alt="Uchiha Itachi"></p><h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><h2 id="概念简介"><a href="#概念简介" class="headerlink" title="概念简介"></a>概念简介</h2><p>在计算机科学中，并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。有一个联合-查找算法（union-find algorithm）定义了两个用于此数据结构的操作：</p><ul><li>Find：确定元素属于哪一个子集。它可以被用来确定两个元素是否属于同一子集。</li><li>Union：将两个子集合并成同一个集合。</li></ul><p>由于支持这两种操作，一个不相交集也常被称为联合-查找数据结构（union-find data structure）或合并-查找集合（merge-find set）。其他的重要方法，MakeSet，用于建立单元素集合。有了这些方法，许多经典的划分问题可以被解决。</p><p>为了更加精确的定义这些方法，需要定义如何表示集合。一种常用的策略是为每个集合选定一个固定的元素，称为代表，以表示整个集合。接着，Find(x) 返回 x 所属集合的代表，而 Union 使用两个集合的代表作为参数。</p><h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>用集合中的某个元素来代表这个集合，该元素称为集合的代表元。<br>一个集合内的所有元素组织成以代表元为根的树形结构。<br>在并查集算法中，合并操作是将该元素所在树连接在被合并元素所在树上。<br>对于查找操作，即是路经查找到树根，确定代表元的过程。</p><blockquote><p>判断两个元素是否属于同一集合，只需要看他们的代表元是否相同即可。</p></blockquote><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>存在两种优化算法：</p><ul><li>按秩合并：使包含较少结点的树根指向包含较多结点的树根。</li><li>路径压缩：使路径查找上的每个点都直接指向根结点。<h3 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h3>是一种在执行“查找”时扁平化树结构的方法。关键在于在路径上的每个节点都可以直接连接到根上；他们都有同样的表示方法。为了达到这样的效果，Find递归地经过树，改变每一个节点的引用到根节点。得到的树将更加扁平，为以后直接或者间接引用节点的操作加速。<br>关键代码在find<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int find(int u)&#123;</span><br><span class="line">    if(u==f[u])return u;</span><br><span class="line">    f[u]=find(f[u]);</span><br><span class="line">    return f[u];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h2 id="完整代码描述"><a href="#完整代码描述" class="headerlink" title="完整代码描述"></a>完整代码描述</h2><ul><li>递归版本(存在溢出的情况)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int f[maxn];</span><br><span class="line">int find(int u)&#123;</span><br><span class="line">    if(u==f[u])return u;</span><br><span class="line">    f[u]=find(f[u]);</span><br><span class="line">    return f[u];</span><br><span class="line">&#125;</span><br><span class="line">void join(int u,int v)&#123;</span><br><span class="line">    int fu=find(u);</span><br><span class="line">    int fv=find(v);</span><br><span class="line">    if(fu!=fv)&#123;</span><br><span class="line">        f[fu]=fv;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>非递归版本</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">int pre[1000 ];</span><br><span class="line">void ini()//初始化，表示每个结点的父节点是其本身</span><br><span class="line">&#123;</span><br><span class="line">for(int i=0;i&lt;maxn;i++)</span><br><span class="line">pre[i]=i;</span><br><span class="line">&#125;</span><br><span class="line">int find(int x)//查找根节点</span><br><span class="line">&#123;</span><br><span class="line">    int r=x;</span><br><span class="line">    while ( pre[r] != r )//返回根节点 r</span><br><span class="line">          r=pre[r];</span><br><span class="line"></span><br><span class="line">    int i=x,j;</span><br><span class="line">    while(i!=r) //路径压缩</span><br><span class="line">    &#123;</span><br><span class="line">         j = pre[i]; //在改变上级之前用临时变量  j 记录下他的值</span><br><span class="line">         pre[i]= r ; //把上级改为根节点</span><br><span class="line">         i=j;</span><br><span class="line">    &#125;</span><br><span class="line">    return r ;</span><br><span class="line">&#125;</span><br><span class="line">void join(int x,int y)//判断x y是否连通，</span><br><span class="line">//如果已经连通，就不用管了 如果不连通，就把它们所在的连通分支合并起,</span><br><span class="line">&#123;</span><br><span class="line">    int fx=find(x),fy=find(y);</span><br><span class="line">    if(fx!=fy)</span><br><span class="line">        pre[fx]=fy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
