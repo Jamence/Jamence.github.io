@@ -3,20 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: c++ | Jamence&#39;s blog</title>
+    <title>素数筛法 | Jamence&#39;s blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Jamence的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jamence&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/categories/Languages/c/index.html">
+        <meta name="keywords" content="素数" />
+    
+    <meta name="description" content="素数 质数（prime number）又称素数，有无限个。质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。  我们对于素数的判定的确经过了几个过程。我们一个一个来讨论 按照定义我们按照定义来实现找出素数1234567891011int flag=0;if(n&amp;lt;2)flag=1;for(int i=2;i&amp;lt;n;i++)&amp;#123;  if(n%i==0)&amp;#123;">
+<meta name="keywords" content="素数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="素数筛法">
+<meta property="og:url" content="http://yoursite.com/2018/03/17/素数筛法/index.html">
 <meta property="og:site_name" content="Jamence&#39;s blog">
-<meta property="og:description" content="Jamence的个人博客">
+<meta property="og:description" content="素数 质数（prime number）又称素数，有无限个。质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。  我们对于素数的判定的确经过了几个过程。我们一个一个来讨论 按照定义我们按照定义来实现找出素数1234567891011int flag=0;if(n&amp;lt;2)flag=1;for(int i=2;i&amp;lt;n;i++)&amp;#123;  if(n%i==0)&amp;#123;">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/03/17/素数筛法/index.jpg">
+<meta property="og:updated_time" content="2018-03-17T13:33:31.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jamence&#39;s blog">
-<meta name="twitter:description" content="Jamence的个人博客">
+<meta name="twitter:title" content="素数筛法">
+<meta name="twitter:description" content="素数 质数（prime number）又称素数，有无限个。质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。  我们对于素数的判定的确经过了几个过程。我们一个一个来讨论 按照定义我们按照定义来实现找出素数1234567891011int flag=0;if(n&amp;lt;2)flag=1;for(int i=2;i&amp;lt;n;i++)&amp;#123;  if(n%i==0)&amp;#123;">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/17/素数筛法/index.jpg">
     
 
     
@@ -153,282 +159,132 @@ var _hmt = _hmt || [];
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">c++</em>
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-素数筛法" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/26/c-继承之虚继承/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/02/26/c-继承之虚继承/index.jpg)" alt="c++继承之虚继承" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/26/c-继承之虚继承/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/c/">c++</a>
-            </div>
-            <div class="date"><time datetime="2018-02-26T12:43:12.000Z" itemprop="datePublished">2018-02-26</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/26/c-继承之虚继承/">c++继承之虚继承</a>
+        素数筛法
         </h1>
     
 
-        <p class="article-excerpt">
-            
-虚继承存在的理由
-存在即合理
-
-虽然我们相信这句话，但是为什么合理呢？是什么促使它存在的呢？我们引出一个概念，菱形继承什么是菱形继承：1234567891011121314151617181920class A  //大小为4&#123;public:    int a;&#125;;class B : public A&#123;public:    int b;&#125;;class C 
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/03/17/素数筛法/" class="article-date">
+            <time datetime="2018-03-17T13:17:46.000Z" itemprop="datePublished">2018-03-17</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/25/c-继承之多重继承和多继承/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/02/25/c-继承之多重继承和多继承/index.jpg)" alt="c++继承之多重继承和多继承" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/25/c-继承之多重继承和多继承/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/素数/">素数</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/c/">c++</a>
             </div>
-            <div class="date"><time datetime="2018-02-25T08:18:04.000Z" itemprop="datePublished">2018-02-25</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/25/c-继承之多重继承和多继承/">c++继承之多重继承和多继承</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/2018/03/17/素数筛法/index.jpg" alt="Uchiha Madara"></p>
+<h1 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h1><blockquote>
+<p>质数（prime number）又称素数，有无限个。<br>质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。</p>
+</blockquote>
+<p>我们对于素数的判定的确经过了几个过程。<br>我们一个一个来讨论</p>
+<h1 id="按照定义"><a href="#按照定义" class="headerlink" title="按照定义"></a>按照定义</h1><p>我们按照定义来实现找出素数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int flag=0;</span><br><span class="line">if(n&lt;2)flag=1;</span><br><span class="line">for(int i=2;i&lt;n;i++)&#123;</span><br><span class="line">  if(n%i==0)&#123;</span><br><span class="line">    flag=1;</span><br><span class="line">    break;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">if(flag)cout&lt;&lt;&quot;不是素数&quot;&lt;&lt;endl;</span><br><span class="line">else</span><br><span class="line">cout&lt;&lt;&quot;是素数&quot;&lt;&lt;endl;</span><br></pre></td></tr></table></figure></p>
+<p>通过定义来实现素数的判定。<br>优点是比较好理解，<br>缺点是时间复杂度比较高</p>
+<h1 id="埃拉托斯特尼筛法"><a href="#埃拉托斯特尼筛法" class="headerlink" title="埃拉托斯特尼筛法"></a>埃拉托斯特尼筛法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">memset(vis,0,sizeof(vis));</span><br><span class="line">	for(int i=2;i&lt;=n;i++)</span><br><span class="line">		for(int j=i*2;j&lt;=n;j+=i)</span><br><span class="line">			vis[j]=1;</span><br><span class="line"></span><br><span class="line">//优化</span><br><span class="line">int m=sqrt(n+0.5);</span><br><span class="line">memset(vis,0,sizeof(vis));</span><br><span class="line">for(int i=2;i&lt;=m;i++)</span><br><span class="line">	if(!vis[i])</span><br><span class="line">		for(int j=i*i;j&lt;=n;j+=i)</span><br><span class="line">			vis[j]=1;</span><br></pre></td></tr></table></figure>
+<p>这是一种求素数比较方便并且快速的方法。<br>具体思想是<br>筛去2，3，5，7等等的倍数，那么剩余的便是合数。</p>
 
-        <p class="article-excerpt">
+        </div>
+        <footer class="article-footer">
             
-多重继承概念多重继承是一个类的父类也有父类。多重继承的对象初始化方式最高的父类到子类。A()–&gt;B–&gt;C()销毁时正好是初始化的反顺序。~C–&gt;~B–&gt;A()代码示例为：123class A&#123;&#125;;class B:public A&#123;&#125;;class C:public B&#123;&#125;;
-特点：
-多重继承与多继承不同，当B类从A
-        </p>
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
-    
-        </div>
-    
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDA0NS8xMDU4Mw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/25/c-继承之is-a和hasas-a/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/02/25/c-继承之is-a和hasas-a/index.jpg)" alt="c++继承之is_a和has_a" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/25/c-继承之is-a和hasas-a/">0</span>
-    
-</span>
+       if (typeof LivereTower === 'function') { return; }
 
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/c/">c++</a>
-            </div>
-            <div class="date"><time datetime="2018-02-25T08:17:34.000Z" itemprop="datePublished">2018-02-25</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/25/c-继承之is-a和hasas-a/">c++继承之is_a和has_a</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-is_a原则概念举一个例子，有一个Horse类可以保存关于马的所有信息，身高体重等等，那么我们就可以从Horse类中派生出白马类，白马类包含所有Horse类的成员，在白马类中可以新增关于白马的成员，这个成员通常不用于Horse类。1234567891011class Horse&#123;public:    int Tall;    int Weight;&#125;;class WhiteH
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/25/c-继承之隐藏/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/02/25/c-继承之隐藏/index.jpg)" alt="c++继承之隐藏" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/25/c-继承之隐藏/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/c/">c++</a>
-            </div>
-            <div class="date"><time datetime="2018-02-25T08:16:53.000Z" itemprop="datePublished">2018-02-25</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/25/c-继承之隐藏/">c++继承之隐藏</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-隐藏概念：隐藏是指派生类的函数屏蔽了与其同名的基类函数。
-代码实例：12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;iostream&gt;using namespace std;class Person&#123;public:    Person()&#123;
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/25/c-继承方式/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/02/25/c-继承方式/index.jpg)" alt="c++继承方式" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/25/c-继承方式/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/c/">c++</a>
-            </div>
-            <div class="date"><time datetime="2018-02-25T07:36:58.000Z" itemprop="datePublished">2018-02-25</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/25/c-继承方式/">c++继承方式</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-c++继承（三种继承方式）三种继承方式
-共有继承公有继承的特点是基类的公有成员和保护成员作为派生类的成员时，它们都保持原有的状态，而基类的私有成员仍然是私有的，不能被这个派生类的子类所访问。
-私有继承私有继承的特点是基类的公有成员和保护成员都作为派生类的私有成员，并且不能被这个派生类的子类所访问。
-保护继承保护继承的特点是基类的所有公有成员和保护成员都成为派生类的保护成员，并且只能被它的派生类成
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-
-
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -463,6 +319,19 @@ c++继承（三种继承方式）三种继承方式
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/03/15/大数运算/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">大数运算</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -668,11 +537,13 @@ c++继承（三种继承方式）三种继承方式
     var disqus_shortname = 'Jamence';
     
     
+    var disqus_url = 'http://yoursite.com/2018/03/17/素数筛法/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
