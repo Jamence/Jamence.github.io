@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-17T14:53:14.661Z</updated>
+  <updated>2018-03-18T09:29:50.868Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前序，中序，后序遍历</title>
+    <link href="http://yoursite.com/2018/03/18/%E5%89%8D%E5%BA%8F%EF%BC%8C%E4%B8%AD%E5%BA%8F%EF%BC%8C%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    <id>http://yoursite.com/2018/03/18/前序，中序，后序遍历/</id>
+    <published>2018-03-18T09:29:42.000Z</published>
+    <updated>2018-03-18T09:29:50.868Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/18/前序，中序，后序遍历/index.jpg" alt="宇智波斑"></p><h1 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h1><p>我们知道树的遍历分为三种情况，前序，中序，后序，层序遍历<br>我们现在要讨论的问题是得知前序和中序，求得后序和层序遍历<br>或者得知后序和中序，求得前序和层序遍历</p><h2 id="得知后序和中序，计算层序"><a href="#得知后序和中序，计算层序" class="headerlink" title="得知后序和中序，计算层序"></a>得知后序和中序，计算层序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn=40;</span><br><span class="line">int hou[maxn];</span><br><span class="line">int mid[maxn];</span><br><span class="line">struct node&#123;</span><br><span class="line">    int le;</span><br><span class="line">    int ri;</span><br><span class="line">&#125;tree[maxn];</span><br><span class="line">int dfs(int ma,int mb,int ha,int hb)&#123;</span><br><span class="line"> //   if(ma==0||mb==0||ha==0||hb==0)return 0;</span><br><span class="line">    if(ma&gt;mb)return 0;</span><br><span class="line">    int root=hou[hb];</span><br><span class="line">    int p1=ma;</span><br><span class="line">    int p2;</span><br><span class="line">    while(mid[p1]!=root)p1++;</span><br><span class="line">    p2=p1-ma;</span><br><span class="line">    tree[root].le=dfs(ma,ma+p2-1,ha,ha+p2-1);</span><br><span class="line">    tree[root].ri=dfs(p1+1,mb,ha+p2,hb-1);</span><br><span class="line">    return root;</span><br><span class="line">&#125;</span><br><span class="line">void bfs(int root)&#123;</span><br><span class="line">    queue&lt;int&gt;q;</span><br><span class="line">    q.push(root);</span><br><span class="line">    while(!q.empty())&#123;</span><br><span class="line">        int cur=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        if(cur!=root)cout&lt;&lt;&quot; &quot;;</span><br><span class="line">        cout&lt;&lt;cur;</span><br><span class="line">        int le,ri;</span><br><span class="line">        le=tree[cur].le;</span><br><span class="line">        ri=tree[cur].ri;</span><br><span class="line">        if(le)q.push(le);</span><br><span class="line">        if(ri)q.push(ri);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    while(cin&gt;&gt;n)&#123;</span><br><span class="line">        for(int i=0;i&lt;=n;i++)&#123;</span><br><span class="line">            tree[i].le=0;</span><br><span class="line">            tree[i].ri=0;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=0;i&lt;n;i++)cin&gt;&gt;hou[i];</span><br><span class="line">        for(int i=0;i&lt;n;i++)cin&gt;&gt;mid[i];</span><br><span class="line">        int root=dfs(0,n-1,0,n-1);</span><br><span class="line">        bfs(root);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>得知前序和中序，求得层序和这个类似。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/18/前序，中序，后序遍历/index.jpg&quot; alt=&quot;宇智波斑&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;树的遍历&quot;&gt;&lt;a href=&quot;#树的遍历&quot; class=&quot;headerlink&quot; title=&quot;树的遍历&quot;&gt;&lt;/a&gt;树的遍历&lt;/h1&gt;&lt;p
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
+    
+    
+      <category term="树形遍历" scheme="http://yoursite.com/tags/%E6%A0%91%E5%BD%A2%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回文串</title>
+    <link href="http://yoursite.com/2018/03/18/%E5%9B%9E%E6%96%87%E4%B8%B2/"/>
+    <id>http://yoursite.com/2018/03/18/回文串/</id>
+    <published>2018-03-18T09:17:01.000Z</published>
+    <updated>2018-03-18T09:19:44.684Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/18/回文串/index.jpg" alt="宇智波鼬"></p><h1 id="回文串"><a href="#回文串" class="headerlink" title="回文串"></a>回文串</h1><h2 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h2><p>什么是回文串<br>“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。</p><h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><ul><li><p>循环中间节点，逐步向两边遍历</p></li><li><p>从两边向中间遍历。一次可以遍历两个，算法复杂度为nlogn</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int INF=0x3f3f3f3f;</span><br><span class="line">const int maxn=1000+10;</span><br><span class="line">int vis[maxn][maxn];</span><br><span class="line">string str;</span><br><span class="line">int p[maxn][maxn];</span><br><span class="line">int pa(int i,int j)&#123;</span><br><span class="line">    if(i&gt;=j)return 1;</span><br><span class="line">    if(str[i]!=str[j])return 0;</span><br><span class="line">    if(vis[i][j])return p[i][j];</span><br><span class="line">    vis[i][j]=1;</span><br><span class="line">    p[i][j]=pa(i+1,j-1);</span><br><span class="line">    return p[i][j];</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">while(getline(cin,str))&#123;</span><br><span class="line">        memset(vis,0,sizeof vis);</span><br><span class="line">        int ans=0;</span><br><span class="line">        int len=str.length();</span><br><span class="line">        for(int i=0;i&lt;len;i++)&#123;</span><br><span class="line">            for(int j=i;j&lt;len;j++)&#123;</span><br><span class="line">                if(pa(i,j))ans=max(ans,j-i+1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/18/回文串/index.jpg&quot; alt=&quot;宇智波鼬&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;回文串&quot;&gt;&lt;a href=&quot;#回文串&quot; class=&quot;headerlink&quot; title=&quot;回文串&quot;&gt;&lt;/a&gt;回文串&lt;/h1&gt;&lt;h2 id=&quot;概念：&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/categories/Algorithm/"/>
+    
+    
+      <category term="回文串" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%96%87%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>母函数</title>
