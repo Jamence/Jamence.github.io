@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-18T09:29:50.868Z</updated>
+  <updated>2018-03-18T11:55:10.742Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>胡思乱想</title>
+    <link href="http://yoursite.com/2018/03/18/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
+    <id>http://yoursite.com/2018/03/18/胡思乱想/</id>
+    <published>2018-03-18T11:22:26.000Z</published>
+    <updated>2018-03-18T11:55:10.742Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/03/18/胡思乱想/index.jpg" alt=""><br>果然，我还是喜欢胡思乱想。<br>我想去工作，为什么？<br>我认为自己需要社会学习的经历，需要<code>挣钱</code>，我想太多现在想要的东西，我想要更好的一切。一切都是钱哪，但是我又有一点遗憾，有一点失落。<br>我想去读研，我希望自己可以活出自己想要的姿态，疯狂玩，疯狂学习，结交更多的人。我的性格说实话很奇怪，我不太喜欢说话，但是我经常有奇怪的想法想要和别人分享，我时时说不出口，我比较自卑，过分在意他人的看法和行动，我试图去改，改不掉。<br>大学，是一个象牙塔，我还要呆在这里吗？<br>读研，我认为比较迎合我自己的性格，同时现在是人工智能的时代，读一个好的研究生未来你会得到更好的发展机遇。我的大学，在我看来本科教育很失败。理论很水，项目基本没有，实验室老师也不通知说要同学来学习或者招人。导致我们学校本科生我认为科研没有，理论知识比较薄弱，代码能力太差。不知道是不是中国大学计算机教育的一个普遍问题。<br>我认为自己喜欢难一点的东西，比如c++，比如linux下开发，比如算法和程序设计。不知道自己是喜欢装逼，喜欢获得优越感还是真的认为这个好。无所谓了，我就喜欢这些东西，中二就中二吧。<br>我又认为自己很懒散，我自认为比较努力，但是我没有一个具体的目标，具体的方向。起床不要太晚，作业不要全部不会写，考试不要太差就好了。我认为这样有很大问题。自己就像没有方向的芦苇，来一阵风，就像风吹的方向摇摆，只要不要太差就好了。说了要改变，没有一次做到，每次都向自己妥协，妥协。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/03/18/胡思乱想/index.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;果然，我还是喜欢胡思乱想。&lt;br&gt;我想去工作，为什么？&lt;br&gt;我认为自己需要社会学习的经历，需要&lt;code&gt;挣钱&lt;/code&gt;，我想太多现在想要的东西，我想要更好的一切。一切都
+      
+    
+    </summary>
+    
+      <category term="Lifes" scheme="http://yoursite.com/categories/Lifes/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>前序，中序，后序遍历</title>
