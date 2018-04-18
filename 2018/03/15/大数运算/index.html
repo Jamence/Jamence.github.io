@@ -1,1 +1,592 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>大数运算 | Jamence&#39;s blog</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="keywords" content="大数"><meta name="description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt"><meta name="keywords" content="大数"><meta property="og:type" content="article"><meta property="og:title" content="大数运算"><meta property="og:url" content="http://yoursite.com/2018/03/15/大数运算/index.html"><meta property="og:site_name" content="Jamence&#39;s blog"><meta property="og:description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt"><meta property="og:locale" content="en"><meta property="og:image" content="http://yoursite.com/2018/03/15/大数运算/index.jpg"><meta property="og:updated_time" content="2018-03-16T15:51:03.109Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="大数运算"><meta name="twitter:description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt"><meta name="twitter:image" content="http://yoursite.com/2018/03/15/大数运算/index.jpg"><link rel="alternate" href="/atom.xml" title="Jamence&#39;s blog" type="application/atom+xml"><link rel="icon" href="/css/images/favicon.ico"><link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/libs/titillium-web/styles.css"><link rel="stylesheet" href="/libs/source-code-pro/styles.css"><link rel="stylesheet" href="/css/style.css"><script src="/libs/jquery/2.0.3/jquery.min.js"></script><link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css"><link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><script>!function(e,a,n,t,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(n),o=a.getElementsByTagName(n)[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga"),ga("create","Jamence","auto"),ga("send","pageview")</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?Jamence";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></head><body><div id="wrap"><header id="header"><div id="header-outer" class="outer"><div class="container"><div class="container-inner"><div id="header-title"><h1 class="logo-wrap"><a href="/" class="logo"></a></h1><h2 class="subtitle-wrap"><p class="subtitle">everything is funny when you are exploring</p></h2></div><div id="header-inner" class="nav-container"><a id="main-nav-toggle" class="nav-icon fa fa-bars"></a><div class="nav-container-inner"><ul id="main-nav"><li class="main-nav-list-item"> <a class="main-nav-list-link" href="/">Home</a></li><ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/c/">c++</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Lifes/">Lifes</a></li></ul><li class="main-nav-list-item"> <a class="main-nav-list-link" href="/about/index.html">About</a></li></ul><nav id="sub-nav"><div id="search-form-wrap"><form class="search-form"> <input type="text" class="ins-search-input search-form-input" placeholder="Search"> <button type="submit" class="search-form-submit"></button></form><div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"> <input type="text" class="ins-search-input" placeholder="Type something..."><span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>window.INSIGHT_CONFIG={TRANSLATION:{POSTS:"Posts",PAGES:"Pages",CATEGORIES:"Categories",TAGS:"Tags",UNTITLED:"(Untitled)"},ROOT_URL:"/",CONTENT_URL:"/content.json"}</script><script src="/js/insight.js"></script></div></nav></div></div></div></div></div></header><div class="container"><div class="main-body container-inner"><div class="main-body-inner"><section id="main"><div class="main-body-header"><h1 class="header"> <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a></h1></div><div class="main-body-content"><article id="post-大数运算" class="article article-single article-type-post" itemscope itemprop="blogPost"><div class="article-inner"><header class="article-header"><h1 class="article-title" itemprop="name"> 大数运算</h1></header><div class="article-meta"><div class="article-date"> <a href="/2018/03/15/大数运算/" class="article-date"><time datetime="2018-03-15T13:06:34.000Z" itemprop="datePublished">2018-03-15</time></a></div><div class="article-tag"><i class="fa fa-tag"></i> <a class="tag-link" href="/tags/大数/">大数</a></div></div><div class="article-entry" itemprop="articleBody"><p><img src="/2018/03/15/大数运算/index.jpg" alt="Ōtsutsuki Naruto"><br>我们知道任何数值都有范围一说，c++肯定也一样<br><code>int</code>表示32为整数<br><code>longlong</code>表示64位整数<br>数值过大就会存在溢出的情况<br>怎么办？<br><strong>大数教你做人</strong></p><h1 id="大数加"><a href="#大数加" class="headerlink" title="大数加"></a>大数加</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">string add(string a,string b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    int len1=a.length();</span><br><span class="line">    int len2=b.length();</span><br><span class="line">    int len=max(len1,len2);</span><br><span class="line">    for(int i=len1;i&lt;len;i++)</span><br><span class="line">        a=&quot;0&quot;+a;</span><br><span class="line">    for(int i=len2;i&lt;len;i++)</span><br><span class="line">        b=&quot;0&quot;+b;</span><br><span class="line">    int ok=0;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        char temp=a[i]+b[i]-&apos;0&apos;+ok;</span><br><span class="line">        if(temp&gt;&apos;9&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            ok=1;</span><br><span class="line">            temp-=10;</span><br><span class="line">        &#125;</span><br><span class="line">        else ok=0;</span><br><span class="line">        c=temp+c;</span><br><span class="line">    &#125;</span><br><span class="line">    if(ok) c=&quot;1&quot;+c;</span><br><span class="line">    int pos=-1;</span><br><span class="line">    for(int i=0;i&lt;c.length();i++)&#123;</span><br><span class="line">    	if(c[i]==&apos;0&apos;)pos=i;</span><br><span class="line">    	else</span><br><span class="line">    	break;</span><br><span class="line">    &#125;</span><br><span class="line">//    cout&lt;&lt;pos&lt;&lt;endl;</span><br><span class="line">	if(pos==c.length()-1)return &quot;0&quot;;</span><br><span class="line">    return c.substr(pos+1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>大数加法只是实现了简单的加减运算，记录每一位相加的结果（总的结果对10取余）以及进位（总的结果除以10）</p><h1 id="大数减"><a href="#大数减" class="headerlink" title="大数减"></a>大数减</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">string sub(string a,string b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    bool ok=0;</span><br><span class="line">    int len1=a.length();</span><br><span class="line">    int len2=b.length();</span><br><span class="line">    int len=max(len1,len2);</span><br><span class="line">    for(int i=len1;i&lt;len;i++)</span><br><span class="line">        a=&quot;0&quot;+a;</span><br><span class="line">    for(int i=len2;i&lt;len;i++)</span><br><span class="line">        b=&quot;0&quot;+b;</span><br><span class="line">    if(a&lt;b)</span><br><span class="line">    &#123;</span><br><span class="line">        string temp=a;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">        ok=1;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        if(a[i]&lt;b[i])</span><br><span class="line">        &#123;</span><br><span class="line">            a[i-1]-=1;</span><br><span class="line">            a[i]+=10;</span><br><span class="line">        &#125;</span><br><span class="line">        char temp=a[i]-b[i]+&apos;0&apos;;</span><br><span class="line">        c=temp+c;</span><br><span class="line">    &#125;</span><br><span class="line">    int pos=0;</span><br><span class="line">    while(c[pos]==&apos;0&apos; &amp;&amp; pos&lt;len) pos++;</span><br><span class="line">    if(pos==len) return &quot;0&quot;;</span><br><span class="line">    if(ok) return &quot;-&quot;+c.substr(pos);</span><br><span class="line">    return c.substr(pos);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>大数加法和大数减法类似，如果对应位相减是负数，那么被减数的对应位数字前高一位减1，对应位加10。这是被减数减去减数就是存在的。</p><h1 id="大数乘"><a href="#大数乘" class="headerlink" title="大数乘"></a>大数乘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">string mul(string a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    char s;</span><br><span class="line">    int len=a.length();</span><br><span class="line">    int ok=0;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        int temp=(a[i]-&apos;0&apos;)*b+ok;</span><br><span class="line">        ok=temp/10;</span><br><span class="line">        s=temp%10+&apos;0&apos;;</span><br><span class="line">        c=s+c;</span><br><span class="line">    &#125;</span><br><span class="line">    while(ok)</span><br><span class="line">    &#123;</span><br><span class="line">        s=ok%10+&apos;0&apos;;</span><br><span class="line">        c=s+c;</span><br><span class="line">        ok/=10;</span><br><span class="line">    &#125;</span><br><span class="line">    return c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们假设<code>a*b</code><br>类似于大数加法运算，a的每一位数字乘上b得到结果的当前位的初始值，当前位初始值对10取模得到结果的当前位。同时进位等于当前位初始值加上进位。<br>我们假设<code>12345*12</code><br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  12</span><br><span class="line">* 12</span><br><span class="line">每一位的初始值等于</span><br><span class="line">12 24</span><br><span class="line">我们从右向左对十取模并且得到进位，将进位加到高一位的位置。</span><br><span class="line">那么有</span><br><span class="line">第一步：4（进位为2）</span><br><span class="line">第二步：12+2 4</span><br><span class="line">第三步：1 4 4</span><br><span class="line">结果就是144</span><br></pre></td></tr></table></figure><p></p><h1 id="大数除"><a href="#大数除" class="headerlink" title="大数除"></a>大数除</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">string div(string a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    int len=a.length();</span><br><span class="line">    int ans=0;</span><br><span class="line">    char s;</span><br><span class="line">    for(int i=0;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ans=ans*10+a[i]-&apos;0&apos;;</span><br><span class="line">        s=ans/b+&apos;0&apos;;</span><br><span class="line">        ans%=b;</span><br><span class="line">        c+=s;</span><br><span class="line">    &#125;</span><br><span class="line">    int pos=0;</span><br><span class="line">    while(pos&lt;len &amp;&amp; c[pos]==&apos;0&apos;) pos++;</span><br><span class="line">    if(pos==len) return &quot;0&quot;;</span><br><span class="line">    return c.substr(pos);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这是模拟数式运算的一种实现方法。<br>大家可以自己尝试一下。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul><li>前导零</li><li>相加后的结果字长</li><li>字符串中存储的每一位的数字和我们已知的十进制表示法相反，也就是说高位在前，低位在后，而我们进行加减运算列等式的时候是低位对其进行计算，所以在计算前我们需要转换字符串的字符位置。</li></ul></div><footer class="article-footer"><div class="a2a_kit a2a_default_style"> <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a><span class="a2a_divider"></span><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a><a class="a2a_button_pinterest"></a><a class="a2a_button_tumblr"></a></div><script src="//static.addtoany.com/menu/page.js"></script><style>.a2a_menu{border-radius:4px}.a2a_menu a{margin:2px 0;font-size:14px;line-height:16px;border-radius:4px;color:inherit!important;font-family:'Microsoft Yahei'}#a2apage_dropdown{margin:10px 0}.a2a_mini_services{padding:10px}a.a2a_i,i.a2a_i{width:122px;line-height:16px}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{width:16px;height:16px;line-height:16px;vertical-align:top;background-size:16px}a.a2a_i{border:none!important}a.a2a_menu_show_more_less{margin:0;padding:10px 0;line-height:16px}.a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}</style></footer></div></article><div id="lv-container" data-id="city" data-uid="MTAyMC8zNDA0NS8xMDU4Mw=="><script>!function(e,t){var n,c=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&((n=e.createElement(t)).src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,c.parentNode.insertBefore(n,c))}(document,"script")</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div></div></section><aside id="sidebar"><a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a><div class="sidebar-top"><p>follow:</p><ul class="social-links"><li><a class="social-tooltip" title="github" href="https://github.com/Jamence" target="_blank"><i class="icon fa fa-github"></i></a></li><li><a class="social-tooltip" title="weibo" href="https://weibo.com/p/1005055772753810/home?from=page_100505&mod=TAB#place" target="_blank"><i class="icon fa fa-weibo"></i></a></li><li><a class="social-tooltip" title="rss" href="/atom.xml" target="_blank"><i class="icon fa fa-rss"></i></a></li></ul></div><nav id="article-nav"> <a href="/2018/03/17/素数筛法/" id="article-nav-newer" class="article-nav-link-wrap"><strong class="article-nav-caption">newer</strong><p class="article-nav-title"> 素数筛法</p><i class="icon fa fa-chevron-right" id="icon-chevron-right"></i></a> <a href="/2018/03/10/背包/" id="article-nav-older" class="article-nav-link-wrap"><strong class="article-nav-caption">older</strong><p class="article-nav-title">背包</p><i class="icon fa fa-chevron-left" id="icon-chevron-left"></i></a></nav><div class="widgets-container"><div class="widget-wrap"><h3 class="widget-title">recents</h3><div class="widget"><ul id="recent-post"><li><div class="item-thumbnail"><a href="/2018/04/18/动态规划/" class="thumbnail"><span style="background-image:url(/2018/04/18/动态规划/.png)" alt="动态规划" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/04/18/动态规划/" class="title">动态规划</a></p><p class="item-date"><time datetime="2018-04-18T14:24:58.000Z" itemprop="datePublished">2018-04-18</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/29/简单博弈/" class="thumbnail"><span style="background-image:url(/2018/03/29/简单博弈/index.jpg)" alt="简单博弈" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/29/简单博弈/" class="title">简单博弈</a></p><p class="item-date"><time datetime="2018-03-29T08:41:43.000Z" itemprop="datePublished">2018-03-29</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/29/线段树/" class="thumbnail"><span style="background-image:url(/2018/03/29/线段树/index.jpg)" alt="线段树" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/29/线段树/" class="title">线段树</a></p><p class="item-date"><time datetime="2018-03-29T08:41:26.000Z" itemprop="datePublished">2018-03-29</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/18/二分/" class="thumbnail"><span style="background-image:url(/2018/03/18/二分/index.jpg)" alt="二分" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/18/二分/" class="title">二分</a></p><p class="item-date"><time datetime="2018-03-18T13:51:54.000Z" itemprop="datePublished">2018-03-18</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/18/数论/" class="thumbnail"><span style="background-image:url(/2018/03/18/数论/index.jpg)" alt="数论" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/18/数论/" class="title">数论</a></p><p class="item-date"><time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time></p></div></li></ul></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">categories</h3><div class="widget"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/c/">c++</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lifes/">Lifes</a><span class="category-list-count">3</span></li></ul></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">archives</h3><div class="widget"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">8</span></li></ul></div></div><div class="widget-wrap widget-float"><h3 class="widget-title">tag cloud</h3><div class="widget tagcloud"> <a href="/tags/DP/" style="font-size:10px">DP</a> <a href="/tags/c-继承/" style="font-size:20px">c++继承</a> <a href="/tags/二分查找/" style="font-size:10px">二分查找</a> <a href="/tags/博弈/" style="font-size:10px">博弈</a> <a href="/tags/回文串/" style="font-size:10px">回文串</a> <a href="/tags/大数/" style="font-size:10px">大数</a> <a href="/tags/并查集/" style="font-size:10px">并查集</a> <a href="/tags/数论/" style="font-size:10px">数论</a> <a href="/tags/最小生成树/" style="font-size:10px">最小生成树</a> <a href="/tags/最短路/" style="font-size:10px">最短路</a> <a href="/tags/树形遍历/" style="font-size:10px">树形遍历</a> <a href="/tags/母函数/" style="font-size:10px">母函数</a> <a href="/tags/素数/" style="font-size:10px">素数</a> <a href="/tags/线段树/" style="font-size:10px">线段树</a> <a href="/tags/考研/" style="font-size:10px">考研</a> <a href="/tags/背包/" style="font-size:10px">背包</a> <a href="/tags/计划/" style="font-size:10px">计划</a></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">links</h3><div class="widget"><ul><li> <a href="http://hexo.io">Hexo</a></li><li> <a href="http://blog.csdn.net/Jamence">Jamence</a></li></ul></div></div></div><nav><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=29544830&auto=0&height=66"></iframe></nav></aside></div></div></div><footer id="footer"><div class="container"><div class="container-inner"><a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a><div class="credit"><h1 class="logo-wrap"><a href="/" class="logo"></a></h1><p>&copy; 2018 Jamence</p><p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人次</span></div></div></div></footer><script>var disqus_shortname="Jamence",disqus_url="http://yoursite.com/2018/03/15/大数运算/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script><script src="/libs/lightgallery/js/lightgallery.min.js"></script><script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script><script src="/libs/lightgallery/js/lg-pager.min.js"></script><script src="/libs/lightgallery/js/lg-autoplay.min.js"></script><script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script><script src="/libs/lightgallery/js/lg-zoom.min.js"></script><script src="/libs/lightgallery/js/lg-hash.min.js"></script><script src="/libs/lightgallery/js/lg-share.min.js"></script><script src="/libs/lightgallery/js/lg-video.min.js"></script><script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="/js/main.js"></script></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>大数运算 | Jamence&#39;s blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="大数" />
+    
+    <meta name="description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt">
+<meta name="keywords" content="大数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数运算">
+<meta property="og:url" content="http://yoursite.com/2018/03/15/大数运算/index.html">
+<meta property="og:site_name" content="Jamence&#39;s blog">
+<meta property="og:description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/03/15/大数运算/index.jpg">
+<meta property="og:updated_time" content="2018-03-16T15:51:03.109Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大数运算">
+<meta name="twitter:description" content="我们知道任何数值都有范围一说，c++肯定也一样int表示32为整数longlong表示64位整数数值过大就会存在溢出的情况怎么办？大数教你做人 大数加123456789101112131415161718192021222324252627282930313233string add(string a,string b)&amp;#123;    string c;    int len1=a.lengt">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/15/大数运算/index.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Jamence&#39;s blog" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Jamence', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?Jamence";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">everything is funny when you are exploring</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/c/">c++</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Lifes/">Lifes</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-大数运算" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        大数运算
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/03/15/大数运算/" class="article-date">
+            <time datetime="2018-03-15T13:06:34.000Z" itemprop="datePublished">2018-03-15</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/大数/">大数</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/2018/03/15/大数运算/index.jpg" alt="Ōtsutsuki Naruto"><br>我们知道任何数值都有范围一说，c++肯定也一样<br><code>int</code>表示32为整数<br><code>longlong</code>表示64位整数<br>数值过大就会存在溢出的情况<br>怎么办？<br><strong>大数教你做人</strong></p>
+<h1 id="大数加"><a href="#大数加" class="headerlink" title="大数加"></a>大数加</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">string add(string a,string b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    int len1=a.length();</span><br><span class="line">    int len2=b.length();</span><br><span class="line">    int len=max(len1,len2);</span><br><span class="line">    for(int i=len1;i&lt;len;i++)</span><br><span class="line">        a=&quot;0&quot;+a;</span><br><span class="line">    for(int i=len2;i&lt;len;i++)</span><br><span class="line">        b=&quot;0&quot;+b;</span><br><span class="line">    int ok=0;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        char temp=a[i]+b[i]-&apos;0&apos;+ok;</span><br><span class="line">        if(temp&gt;&apos;9&apos;)</span><br><span class="line">        &#123;</span><br><span class="line">            ok=1;</span><br><span class="line">            temp-=10;</span><br><span class="line">        &#125;</span><br><span class="line">        else ok=0;</span><br><span class="line">        c=temp+c;</span><br><span class="line">    &#125;</span><br><span class="line">    if(ok) c=&quot;1&quot;+c;</span><br><span class="line">    int pos=-1;</span><br><span class="line">    for(int i=0;i&lt;c.length();i++)&#123;</span><br><span class="line">    	if(c[i]==&apos;0&apos;)pos=i;</span><br><span class="line">    	else</span><br><span class="line">    	break;</span><br><span class="line">    &#125;</span><br><span class="line">//    cout&lt;&lt;pos&lt;&lt;endl;</span><br><span class="line">	if(pos==c.length()-1)return &quot;0&quot;;</span><br><span class="line">    return c.substr(pos+1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大数加法只是实现了简单的加减运算，记录每一位相加的结果（总的结果对10取余）以及进位（总的结果除以10）</p>
+<h1 id="大数减"><a href="#大数减" class="headerlink" title="大数减"></a>大数减</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">string sub(string a,string b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    bool ok=0;</span><br><span class="line">    int len1=a.length();</span><br><span class="line">    int len2=b.length();</span><br><span class="line">    int len=max(len1,len2);</span><br><span class="line">    for(int i=len1;i&lt;len;i++)</span><br><span class="line">        a=&quot;0&quot;+a;</span><br><span class="line">    for(int i=len2;i&lt;len;i++)</span><br><span class="line">        b=&quot;0&quot;+b;</span><br><span class="line">    if(a&lt;b)</span><br><span class="line">    &#123;</span><br><span class="line">        string temp=a;</span><br><span class="line">        a=b;</span><br><span class="line">        b=temp;</span><br><span class="line">        ok=1;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        if(a[i]&lt;b[i])</span><br><span class="line">        &#123;</span><br><span class="line">            a[i-1]-=1;</span><br><span class="line">            a[i]+=10;</span><br><span class="line">        &#125;</span><br><span class="line">        char temp=a[i]-b[i]+&apos;0&apos;;</span><br><span class="line">        c=temp+c;</span><br><span class="line">    &#125;</span><br><span class="line">    int pos=0;</span><br><span class="line">    while(c[pos]==&apos;0&apos; &amp;&amp; pos&lt;len) pos++;</span><br><span class="line">    if(pos==len) return &quot;0&quot;;</span><br><span class="line">    if(ok) return &quot;-&quot;+c.substr(pos);</span><br><span class="line">    return c.substr(pos);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大数加法和大数减法类似，如果对应位相减是负数，那么被减数的对应位数字前高一位减1，对应位加10。这是被减数减去减数就是存在的。</p>
+<h1 id="大数乘"><a href="#大数乘" class="headerlink" title="大数乘"></a>大数乘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">string mul(string a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    char s;</span><br><span class="line">    int len=a.length();</span><br><span class="line">    int ok=0;</span><br><span class="line">    for(int i=len-1;i&gt;=0;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        int temp=(a[i]-&apos;0&apos;)*b+ok;</span><br><span class="line">        ok=temp/10;</span><br><span class="line">        s=temp%10+&apos;0&apos;;</span><br><span class="line">        c=s+c;</span><br><span class="line">    &#125;</span><br><span class="line">    while(ok)</span><br><span class="line">    &#123;</span><br><span class="line">        s=ok%10+&apos;0&apos;;</span><br><span class="line">        c=s+c;</span><br><span class="line">        ok/=10;</span><br><span class="line">    &#125;</span><br><span class="line">    return c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们假设<code>a*b</code><br>类似于大数加法运算，a的每一位数字乘上b得到结果的当前位的初始值，当前位初始值对10取模得到结果的当前位。同时进位等于当前位初始值加上进位。<br>我们假设<code>12345*12</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  12</span><br><span class="line">* 12</span><br><span class="line">每一位的初始值等于</span><br><span class="line">12 24</span><br><span class="line">我们从右向左对十取模并且得到进位，将进位加到高一位的位置。</span><br><span class="line">那么有</span><br><span class="line">第一步：4（进位为2）</span><br><span class="line">第二步：12+2 4</span><br><span class="line">第三步：1 4 4</span><br><span class="line">结果就是144</span><br></pre></td></tr></table></figure></p>
+<h1 id="大数除"><a href="#大数除" class="headerlink" title="大数除"></a>大数除</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">string div(string a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    string c;</span><br><span class="line">    int len=a.length();</span><br><span class="line">    int ans=0;</span><br><span class="line">    char s;</span><br><span class="line">    for(int i=0;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ans=ans*10+a[i]-&apos;0&apos;;</span><br><span class="line">        s=ans/b+&apos;0&apos;;</span><br><span class="line">        ans%=b;</span><br><span class="line">        c+=s;</span><br><span class="line">    &#125;</span><br><span class="line">    int pos=0;</span><br><span class="line">    while(pos&lt;len &amp;&amp; c[pos]==&apos;0&apos;) pos++;</span><br><span class="line">    if(pos==len) return &quot;0&quot;;</span><br><span class="line">    return c.substr(pos);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是模拟数式运算的一种实现方法。<br>大家可以自己尝试一下。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>前导零</li>
+<li>相加后的结果字长</li>
+<li>字符串中存储的每一位的数字和我们已知的十进制表示法相反，也就是说高位在前，低位在后，而我们进行加减运算列等式的时候是低位对其进行计算，所以在计算前我们需要转换字符串的字符位置。</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDA0NS8xMDU4Mw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Jamence" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/p/1005055772753810/home?from=page_100505&mod=TAB#place" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/03/17/素数筛法/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            素数筛法
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/03/10/背包/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">背包</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/18/动态规划/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/04/18/动态规划/index.jpg)" alt="动态规划" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/04/18/动态规划/" class="title">动态规划</a></p>
+                            <p class="item-date"><time datetime="2018-04-18T14:24:58.000Z" itemprop="datePublished">2018-04-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/29/简单博弈/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/29/简单博弈/index.jpg)" alt="简单博弈" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/29/简单博弈/" class="title">简单博弈</a></p>
+                            <p class="item-date"><time datetime="2018-03-29T08:41:43.000Z" itemprop="datePublished">2018-03-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/29/线段树/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/29/线段树/index.jpg)" alt="线段树" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/29/线段树/" class="title">线段树</a></p>
+                            <p class="item-date"><time datetime="2018-03-29T08:41:26.000Z" itemprop="datePublished">2018-03-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/18/二分/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/18/二分/index.jpg)" alt="二分" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/18/二分/" class="title">二分</a></p>
+                            <p class="item-date"><time datetime="2018-03-18T13:51:54.000Z" itemprop="datePublished">2018-03-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/18/数论/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/18/数论/index.jpg)" alt="数论" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/18/数论/" class="title">数论</a></p>
+                            <p class="item-date"><time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/c/">c++</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lifes/">Lifes</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">8</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/c-继承/" style="font-size: 20px;">c++继承</a> <a href="/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/tags/博弈/" style="font-size: 10px;">博弈</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/大数/" style="font-size: 10px;">大数</a> <a href="/tags/并查集/" style="font-size: 10px;">并查集</a> <a href="/tags/数论/" style="font-size: 10px;">数论</a> <a href="/tags/最小生成树/" style="font-size: 10px;">最小生成树</a> <a href="/tags/最短路/" style="font-size: 10px;">最短路</a> <a href="/tags/树形遍历/" style="font-size: 10px;">树形遍历</a> <a href="/tags/母函数/" style="font-size: 10px;">母函数</a> <a href="/tags/素数/" style="font-size: 10px;">素数</a> <a href="/tags/线段树/" style="font-size: 10px;">线段树</a> <a href="/tags/考研/" style="font-size: 10px;">考研</a> <a href="/tags/背包/" style="font-size: 10px;">背包</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://blog.csdn.net/Jamence">Jamence</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+	<nav>
+	　<!--这个外链由网易云音乐网页版提供，auto为0表示不自动播放，1表示自动播放，其他参数顾名思义-->
+	  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=29544830&auto=0&height=66"></iframe>
+	</nav>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Jamence</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+				<!--统计start-->
+					  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+					  </script>
+					  <span id="busuanzi_container_site_pv">
+					本站总访问量<span id="busuanzi_value_site_pv"></span>次
+				  </span>
+					  <span id="busuanzi_container_site_uv">
+				  总访客数<span id="busuanzi_value_site_uv"></span>人次
+				  </span>
+			   <!--统计end-->
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'Jamence';
+    
+    
+    var disqus_url = 'http://yoursite.com/2018/03/15/大数运算/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

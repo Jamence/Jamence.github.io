@@ -1,1 +1,588 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>数论 | Jamence&#39;s blog</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="keywords" content="数论"><meta name="description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,"><meta name="keywords" content="数论"><meta property="og:type" content="article"><meta property="og:title" content="数论"><meta property="og:url" content="http://yoursite.com/2018/03/18/数论/index.html"><meta property="og:site_name" content="Jamence&#39;s blog"><meta property="og:description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,"><meta property="og:locale" content="en"><meta property="og:image" content="http://yoursite.com/2018/03/18/数论/index.jpg"><meta property="og:updated_time" content="2018-03-18T13:44:39.310Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="数论"><meta name="twitter:description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,"><meta name="twitter:image" content="http://yoursite.com/2018/03/18/数论/index.jpg"><link rel="alternate" href="/atom.xml" title="Jamence&#39;s blog" type="application/atom+xml"><link rel="icon" href="/css/images/favicon.ico"><link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/libs/titillium-web/styles.css"><link rel="stylesheet" href="/libs/source-code-pro/styles.css"><link rel="stylesheet" href="/css/style.css"><script src="/libs/jquery/2.0.3/jquery.min.js"></script><link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css"><link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><script>!function(e,a,n,t,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(n),o=a.getElementsByTagName(n)[0],g.async=1,g.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga"),ga("create","Jamence","auto"),ga("send","pageview")</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?Jamence";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></head><body><div id="wrap"><header id="header"><div id="header-outer" class="outer"><div class="container"><div class="container-inner"><div id="header-title"><h1 class="logo-wrap"><a href="/" class="logo"></a></h1><h2 class="subtitle-wrap"><p class="subtitle">everything is funny when you are exploring</p></h2></div><div id="header-inner" class="nav-container"><a id="main-nav-toggle" class="nav-icon fa fa-bars"></a><div class="nav-container-inner"><ul id="main-nav"><li class="main-nav-list-item"> <a class="main-nav-list-link" href="/">Home</a></li><ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/c/">c++</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Lifes/">Lifes</a></li></ul><li class="main-nav-list-item"> <a class="main-nav-list-link" href="/about/index.html">About</a></li></ul><nav id="sub-nav"><div id="search-form-wrap"><form class="search-form"> <input type="text" class="ins-search-input search-form-input" placeholder="Search"> <button type="submit" class="search-form-submit"></button></form><div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"> <input type="text" class="ins-search-input" placeholder="Type something..."><span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>window.INSIGHT_CONFIG={TRANSLATION:{POSTS:"Posts",PAGES:"Pages",CATEGORIES:"Categories",TAGS:"Tags",UNTITLED:"(Untitled)"},ROOT_URL:"/",CONTENT_URL:"/content.json"}</script><script src="/js/insight.js"></script></div></nav></div></div></div></div></div></header><div class="container"><div class="main-body container-inner"><div class="main-body-inner"><section id="main"><div class="main-body-header"><h1 class="header"> <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a></h1></div><div class="main-body-content"><article id="post-数论" class="article article-single article-type-post" itemscope itemprop="blogPost"><div class="article-inner"><header class="article-header"><h1 class="article-title" itemprop="name"> 数论</h1></header><div class="article-meta"><div class="article-date"> <a href="/2018/03/18/数论/" class="article-date"><time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time></a></div><div class="article-tag"><i class="fa fa-tag"></i> <a class="tag-link" href="/tags/数论/">数论</a></div></div><div class="article-entry" itemprop="articleBody"><p><img src="/2018/03/18/数论/index.jpg" alt="宇智波佐助"></p><h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><p>数论是一个比较大的话题，慢慢更</p><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><p><a href="http://jamence.top/2018/03/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/" target="_blank" rel="noopener">素数</a></p><h2 id="母函数"><a href="#母函数" class="headerlink" title="母函数"></a>母函数</h2><p><a href="http://jamence.top/categories/Algorithm/" target="_blank" rel="noopener">母函数</a></p><h2 id="gcd"><a href="#gcd" class="headerlink" title="gcd"></a>gcd</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//欧几里得，又叫做最大公约数</span><br><span class="line">int gcd(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">	return b==0?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int gcd(int big, int small)</span><br><span class="line">&#123;</span><br><span class="line">    if (small &gt; big) swap(big, small);</span><br><span class="line">    int temp;</span><br><span class="line">    while (small != 0)&#123; //  辗转相除法</span><br><span class="line">        if (small &gt; big) swap(big, small);</span><br><span class="line">        temp = big % small;</span><br><span class="line">        big = small;</span><br><span class="line">        small = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return(big);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//逆元</span><br><span class="line">gcd(a,b)=a*x+b*y;</span><br><span class="line">gcd(b,a%b,)</span><br><span class="line">ll extgcd(ll a,ll b,ll &amp;x,ll &amp;y)</span><br><span class="line">&#123;</span><br><span class="line">    if(b==0)&#123;</span><br><span class="line">        x=1,y=0;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    ll d=extgcd(b,a%b,x,y);</span><br><span class="line">    ll t=x;</span><br><span class="line">    x=y;</span><br><span class="line">    y=t-a/b*y;</span><br><span class="line">    return d;</span><br><span class="line">&#125;</span><br><span class="line">ll inv(ll a,ll mod)</span><br><span class="line">&#123;</span><br><span class="line">    ll x,y;</span><br><span class="line">    extgcd(a,mod,x,y);</span><br><span class="line">    return (mod+x%mod)%mod;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ll fast_pow(ll a,ll b,ll mod)</span><br><span class="line">&#123;</span><br><span class="line">    ll ans=1;</span><br><span class="line">    while(b)&#123;</span><br><span class="line">        if(b&amp;1)ans=ans*a%mod;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">        b&gt;&gt;=1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line">//快速幂</span><br></pre></td></tr></table></figure><h2 id="卡塔兰数"><a href="#卡塔兰数" class="headerlink" title="卡塔兰数"></a>卡塔兰数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">ll Catelan[N];</span><br><span class="line">//用逆元求解</span><br><span class="line">ll extgcd(ll a, ll b, ll&amp; x, ll&amp; y)</span><br><span class="line">&#123;</span><br><span class="line">    ll d = a;</span><br><span class="line">    if(b != 0)&#123;</span><br><span class="line">        d = extgcd(b, a % b, y, x);</span><br><span class="line">        y -= (a / b) * x;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        x = 1;</span><br><span class="line">        y = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void pre()</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    ll x, y;</span><br><span class="line">    Catelan[0] = 1, Catelan[1] = 1;</span><br><span class="line">    for(i = 2; i &lt; N-5; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Catelan[i] = Catelan[i-1]*(4*i-2) % mod;</span><br><span class="line">        extgcd(i+1, mod, x, y);</span><br><span class="line">        Catelan[i] = (Catelan[i]*((x+mod)%mod)) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="矩阵快速幂求逆元"><a href="#矩阵快速幂求逆元" class="headerlink" title="矩阵快速幂求逆元"></a>矩阵快速幂求逆元</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#define MAXN 100</span><br><span class="line">#define LL long long</span><br><span class="line">#define MOD 10000</span><br><span class="line">using namespace std;</span><br><span class="line">struct Matrix</span><br><span class="line">&#123;</span><br><span class="line">    LL a[MAXN][MAXN];</span><br><span class="line">    int r, c;//行数 列数</span><br><span class="line">&#125;;</span><br><span class="line">Matrix ori, res;//初始矩阵 和 结果矩阵</span><br><span class="line">void init()//初始化矩阵</span><br><span class="line">&#123;</span><br><span class="line">    memset(res.a, 0, sizeof(res.a));</span><br><span class="line">    res.r = 2; res.c = 2;</span><br><span class="line">    for(int i = 1; i &lt;= 2; i++)//构造单位矩阵</span><br><span class="line">        res.a[i][i] = 1;</span><br><span class="line">    ori.r = 2; ori.c = 2;</span><br><span class="line">    ori.a[1][1] = ori.a[1][2] = ori.a[2][1] = 1;</span><br><span class="line">    ori.a[2][2] = 0;</span><br><span class="line">&#125;</span><br><span class="line">Matrix multi(Matrix x, Matrix y)</span><br><span class="line">&#123;</span><br><span class="line">    Matrix z;</span><br><span class="line">    memset(z.a, 0, sizeof(z.a));</span><br><span class="line">    z.r = x.r, z.c = y.c;//新矩阵行数等于x矩阵的行数 列数等于y矩阵的列数</span><br><span class="line">    for(int i = 1; i &lt;= x.r; i++)//x矩阵的行数</span><br><span class="line">    &#123;</span><br><span class="line">        for(int k = 1; k &lt;= x.c; k++)//矩阵x的列数等于矩阵y的行数 即x.c = y.r</span><br><span class="line">        &#123;</span><br><span class="line">            if(x.a[i][k] == 0) continue;//优化</span><br><span class="line">            for(int j = 1; j&lt;= y.c; j++)//y矩阵的列数</span><br><span class="line">                z.a[i][j] = (z.a[i][j] + (x.a[i][k] * y.a[k][j]) % MOD) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return z;</span><br><span class="line">&#125;</span><br><span class="line">void Matrix_mod(int n)</span><br><span class="line">&#123;</span><br><span class="line">    while(n)//N次幂</span><br><span class="line">    &#123;</span><br><span class="line">        if(n &amp; 1)</span><br><span class="line">            res = multi(ori, res);</span><br><span class="line">        ori = multi(ori, ori);</span><br><span class="line">        n &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%lld\n&quot;, res.a[1][2] % MOD);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int N;</span><br><span class="line">    while(scanf(&quot;%d&quot;, &amp;N), N!=-1)</span><br><span class="line">    &#123;</span><br><span class="line">        init();//初始化单位矩阵</span><br><span class="line">        Matrix_mod(N);//矩阵快速幂</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="斯特灵近似"><a href="#斯特灵近似" class="headerlink" title="斯特灵近似"></a>斯特灵近似</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ll steling(ll n)</span><br><span class="line">&#123;</span><br><span class="line">    return ll(log10(sqrt(4*acos(0.0)*n))+n*log10(n/exp(1.0)))+1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><footer class="article-footer"><div class="a2a_kit a2a_default_style"> <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a><span class="a2a_divider"></span><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_google_plus"></a><a class="a2a_button_pinterest"></a><a class="a2a_button_tumblr"></a></div><script src="//static.addtoany.com/menu/page.js"></script><style>.a2a_menu{border-radius:4px}.a2a_menu a{margin:2px 0;font-size:14px;line-height:16px;border-radius:4px;color:inherit!important;font-family:'Microsoft Yahei'}#a2apage_dropdown{margin:10px 0}.a2a_mini_services{padding:10px}a.a2a_i,i.a2a_i{width:122px;line-height:16px}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{width:16px;height:16px;line-height:16px;vertical-align:top;background-size:16px}a.a2a_i{border:none!important}a.a2a_menu_show_more_less{margin:0;padding:10px 0;line-height:16px}.a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}</style></footer></div></article><div id="lv-container" data-id="city" data-uid="MTAyMC8zNDA0NS8xMDU4Mw=="><script>!function(e,t){var n,c=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&((n=e.createElement(t)).src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,c.parentNode.insertBefore(n,c))}(document,"script")</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div></div></section><aside id="sidebar"><a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a><div class="sidebar-top"><p>follow:</p><ul class="social-links"><li><a class="social-tooltip" title="github" href="https://github.com/Jamence" target="_blank"><i class="icon fa fa-github"></i></a></li><li><a class="social-tooltip" title="weibo" href="https://weibo.com/p/1005055772753810/home?from=page_100505&mod=TAB#place" target="_blank"><i class="icon fa fa-weibo"></i></a></li><li><a class="social-tooltip" title="rss" href="/atom.xml" target="_blank"><i class="icon fa fa-rss"></i></a></li></ul></div><nav id="article-nav"> <a href="/2018/03/18/二分/" id="article-nav-newer" class="article-nav-link-wrap"><strong class="article-nav-caption">newer</strong><p class="article-nav-title"> 二分</p><i class="icon fa fa-chevron-right" id="icon-chevron-right"></i></a> <a href="/2018/03/18/胡思乱想/" id="article-nav-older" class="article-nav-link-wrap"><strong class="article-nav-caption">older</strong><p class="article-nav-title">胡思乱想</p><i class="icon fa fa-chevron-left" id="icon-chevron-left"></i></a></nav><div class="widgets-container"><div class="widget-wrap"><h3 class="widget-title">recents</h3><div class="widget"><ul id="recent-post"><li><div class="item-thumbnail"><a href="/2018/04/18/动态规划/" class="thumbnail"><span style="background-image:url(/2018/04/18/动态规划/.png)" alt="动态规划" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/04/18/动态规划/" class="title">动态规划</a></p><p class="item-date"><time datetime="2018-04-18T14:24:58.000Z" itemprop="datePublished">2018-04-18</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/29/简单博弈/" class="thumbnail"><span style="background-image:url(/2018/03/29/简单博弈/index.jpg)" alt="简单博弈" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/29/简单博弈/" class="title">简单博弈</a></p><p class="item-date"><time datetime="2018-03-29T08:41:43.000Z" itemprop="datePublished">2018-03-29</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/29/线段树/" class="thumbnail"><span style="background-image:url(/2018/03/29/线段树/index.jpg)" alt="线段树" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/29/线段树/" class="title">线段树</a></p><p class="item-date"><time datetime="2018-03-29T08:41:26.000Z" itemprop="datePublished">2018-03-29</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/18/二分/" class="thumbnail"><span style="background-image:url(/2018/03/18/二分/index.jpg)" alt="二分" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/18/二分/" class="title">二分</a></p><p class="item-date"><time datetime="2018-03-18T13:51:54.000Z" itemprop="datePublished">2018-03-18</time></p></div></li><li><div class="item-thumbnail"><a href="/2018/03/18/数论/" class="thumbnail"><span style="background-image:url(/2018/03/18/数论/index.jpg)" alt="数论" class="thumbnail-image"></span></a></div><div class="item-inner"><p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p><p class="item-title"><a href="/2018/03/18/数论/" class="title">数论</a></p><p class="item-date"><time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time></p></div></li></ul></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">categories</h3><div class="widget"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/c/">c++</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lifes/">Lifes</a><span class="category-list-count">3</span></li></ul></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">archives</h3><div class="widget"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">8</span></li></ul></div></div><div class="widget-wrap widget-float"><h3 class="widget-title">tag cloud</h3><div class="widget tagcloud"> <a href="/tags/DP/" style="font-size:10px">DP</a> <a href="/tags/c-继承/" style="font-size:20px">c++继承</a> <a href="/tags/二分查找/" style="font-size:10px">二分查找</a> <a href="/tags/博弈/" style="font-size:10px">博弈</a> <a href="/tags/回文串/" style="font-size:10px">回文串</a> <a href="/tags/大数/" style="font-size:10px">大数</a> <a href="/tags/并查集/" style="font-size:10px">并查集</a> <a href="/tags/数论/" style="font-size:10px">数论</a> <a href="/tags/最小生成树/" style="font-size:10px">最小生成树</a> <a href="/tags/最短路/" style="font-size:10px">最短路</a> <a href="/tags/树形遍历/" style="font-size:10px">树形遍历</a> <a href="/tags/母函数/" style="font-size:10px">母函数</a> <a href="/tags/素数/" style="font-size:10px">素数</a> <a href="/tags/线段树/" style="font-size:10px">线段树</a> <a href="/tags/考研/" style="font-size:10px">考研</a> <a href="/tags/背包/" style="font-size:10px">背包</a> <a href="/tags/计划/" style="font-size:10px">计划</a></div></div><div class="widget-wrap widget-list"><h3 class="widget-title">links</h3><div class="widget"><ul><li> <a href="http://hexo.io">Hexo</a></li><li> <a href="http://blog.csdn.net/Jamence">Jamence</a></li></ul></div></div></div><nav><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=29544830&auto=0&height=66"></iframe></nav></aside></div></div></div><footer id="footer"><div class="container"><div class="container-inner"><a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a><div class="credit"><h1 class="logo-wrap"><a href="/" class="logo"></a></h1><p>&copy; 2018 Jamence</p><p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人次</span></div></div></div></footer><script>var disqus_shortname="Jamence",disqus_url="http://yoursite.com/2018/03/18/数论/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script><script src="/libs/lightgallery/js/lightgallery.min.js"></script><script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script><script src="/libs/lightgallery/js/lg-pager.min.js"></script><script src="/libs/lightgallery/js/lg-autoplay.min.js"></script><script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script><script src="/libs/lightgallery/js/lg-zoom.min.js"></script><script src="/libs/lightgallery/js/lg-hash.min.js"></script><script src="/libs/lightgallery/js/lg-share.min.js"></script><script src="/libs/lightgallery/js/lg-video.min.js"></script><script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script><script src="/js/main.js"></script></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>数论 | Jamence&#39;s blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="数论" />
+    
+    <meta name="description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,">
+<meta name="keywords" content="数论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数论">
+<meta property="og:url" content="http://yoursite.com/2018/03/18/数论/index.html">
+<meta property="og:site_name" content="Jamence&#39;s blog">
+<meta property="og:description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2018/03/18/数论/index.jpg">
+<meta property="og:updated_time" content="2018-03-18T13:44:39.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数论">
+<meta name="twitter:description" content="数论数论是一个比较大的话题，慢慢更 素数素数 母函数母函数 gcd123456789101112131415161718//欧几里得，又叫做最大公约数int gcd(int a,int b)&amp;#123;	return b==0?a:gcd(b,a%b);&amp;#125;int gcd(int big, int small)&amp;#123;    if (small &amp;gt; big) swap(big,">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/18/数论/index.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Jamence&#39;s blog" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'Jamence', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?Jamence";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">everything is funny when you are exploring</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/c/">c++</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Lifes/">Lifes</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-数论" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        数论
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/03/18/数论/" class="article-date">
+            <time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/数论/">数论</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/2018/03/18/数论/index.jpg" alt="宇智波佐助"></p>
+<h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><p>数论是一个比较大的话题，慢慢更</p>
+<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><p><a href="http://jamence.top/2018/03/17/%E7%B4%A0%E6%95%B0%E7%AD%9B%E6%B3%95/" target="_blank" rel="noopener">素数</a></p>
+<h2 id="母函数"><a href="#母函数" class="headerlink" title="母函数"></a>母函数</h2><p><a href="http://jamence.top/categories/Algorithm/" target="_blank" rel="noopener">母函数</a></p>
+<h2 id="gcd"><a href="#gcd" class="headerlink" title="gcd"></a>gcd</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//欧几里得，又叫做最大公约数</span><br><span class="line">int gcd(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">	return b==0?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int gcd(int big, int small)</span><br><span class="line">&#123;</span><br><span class="line">    if (small &gt; big) swap(big, small);</span><br><span class="line">    int temp;</span><br><span class="line">    while (small != 0)&#123; //  辗转相除法</span><br><span class="line">        if (small &gt; big) swap(big, small);</span><br><span class="line">        temp = big % small;</span><br><span class="line">        big = small;</span><br><span class="line">        small = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return(big);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="逆元"><a href="#逆元" class="headerlink" title="逆元"></a>逆元</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//逆元</span><br><span class="line">gcd(a,b)=a*x+b*y;</span><br><span class="line">gcd(b,a%b,)</span><br><span class="line">ll extgcd(ll a,ll b,ll &amp;x,ll &amp;y)</span><br><span class="line">&#123;</span><br><span class="line">    if(b==0)&#123;</span><br><span class="line">        x=1,y=0;</span><br><span class="line">        return a;</span><br><span class="line">    &#125;</span><br><span class="line">    ll d=extgcd(b,a%b,x,y);</span><br><span class="line">    ll t=x;</span><br><span class="line">    x=y;</span><br><span class="line">    y=t-a/b*y;</span><br><span class="line">    return d;</span><br><span class="line">&#125;</span><br><span class="line">ll inv(ll a,ll mod)</span><br><span class="line">&#123;</span><br><span class="line">    ll x,y;</span><br><span class="line">    extgcd(a,mod,x,y);</span><br><span class="line">    return (mod+x%mod)%mod;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ll fast_pow(ll a,ll b,ll mod)</span><br><span class="line">&#123;</span><br><span class="line">    ll ans=1;</span><br><span class="line">    while(b)&#123;</span><br><span class="line">        if(b&amp;1)ans=ans*a%mod;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">        b&gt;&gt;=1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br><span class="line">//快速幂</span><br></pre></td></tr></table></figure>
+<h2 id="卡塔兰数"><a href="#卡塔兰数" class="headerlink" title="卡塔兰数"></a>卡塔兰数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">ll Catelan[N];</span><br><span class="line">//用逆元求解</span><br><span class="line">ll extgcd(ll a, ll b, ll&amp; x, ll&amp; y)</span><br><span class="line">&#123;</span><br><span class="line">    ll d = a;</span><br><span class="line">    if(b != 0)&#123;</span><br><span class="line">        d = extgcd(b, a % b, y, x);</span><br><span class="line">        y -= (a / b) * x;</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        x = 1;</span><br><span class="line">        y = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    return d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void pre()</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    ll x, y;</span><br><span class="line">    Catelan[0] = 1, Catelan[1] = 1;</span><br><span class="line">    for(i = 2; i &lt; N-5; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Catelan[i] = Catelan[i-1]*(4*i-2) % mod;</span><br><span class="line">        extgcd(i+1, mod, x, y);</span><br><span class="line">        Catelan[i] = (Catelan[i]*((x+mod)%mod)) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="矩阵快速幂求逆元"><a href="#矩阵快速幂求逆元" class="headerlink" title="矩阵快速幂求逆元"></a>矩阵快速幂求逆元</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#define MAXN 100</span><br><span class="line">#define LL long long</span><br><span class="line">#define MOD 10000</span><br><span class="line">using namespace std;</span><br><span class="line">struct Matrix</span><br><span class="line">&#123;</span><br><span class="line">    LL a[MAXN][MAXN];</span><br><span class="line">    int r, c;//行数 列数</span><br><span class="line">&#125;;</span><br><span class="line">Matrix ori, res;//初始矩阵 和 结果矩阵</span><br><span class="line">void init()//初始化矩阵</span><br><span class="line">&#123;</span><br><span class="line">    memset(res.a, 0, sizeof(res.a));</span><br><span class="line">    res.r = 2; res.c = 2;</span><br><span class="line">    for(int i = 1; i &lt;= 2; i++)//构造单位矩阵</span><br><span class="line">        res.a[i][i] = 1;</span><br><span class="line">    ori.r = 2; ori.c = 2;</span><br><span class="line">    ori.a[1][1] = ori.a[1][2] = ori.a[2][1] = 1;</span><br><span class="line">    ori.a[2][2] = 0;</span><br><span class="line">&#125;</span><br><span class="line">Matrix multi(Matrix x, Matrix y)</span><br><span class="line">&#123;</span><br><span class="line">    Matrix z;</span><br><span class="line">    memset(z.a, 0, sizeof(z.a));</span><br><span class="line">    z.r = x.r, z.c = y.c;//新矩阵行数等于x矩阵的行数 列数等于y矩阵的列数</span><br><span class="line">    for(int i = 1; i &lt;= x.r; i++)//x矩阵的行数</span><br><span class="line">    &#123;</span><br><span class="line">        for(int k = 1; k &lt;= x.c; k++)//矩阵x的列数等于矩阵y的行数 即x.c = y.r</span><br><span class="line">        &#123;</span><br><span class="line">            if(x.a[i][k] == 0) continue;//优化</span><br><span class="line">            for(int j = 1; j&lt;= y.c; j++)//y矩阵的列数</span><br><span class="line">                z.a[i][j] = (z.a[i][j] + (x.a[i][k] * y.a[k][j]) % MOD) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return z;</span><br><span class="line">&#125;</span><br><span class="line">void Matrix_mod(int n)</span><br><span class="line">&#123;</span><br><span class="line">    while(n)//N次幂</span><br><span class="line">    &#123;</span><br><span class="line">        if(n &amp; 1)</span><br><span class="line">            res = multi(ori, res);</span><br><span class="line">        ori = multi(ori, ori);</span><br><span class="line">        n &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%lld\n&quot;, res.a[1][2] % MOD);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int N;</span><br><span class="line">    while(scanf(&quot;%d&quot;, &amp;N), N!=-1)</span><br><span class="line">    &#123;</span><br><span class="line">        init();//初始化单位矩阵</span><br><span class="line">        Matrix_mod(N);//矩阵快速幂</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="斯特灵近似"><a href="#斯特灵近似" class="headerlink" title="斯特灵近似"></a>斯特灵近似</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ll steling(ll n)</span><br><span class="line">&#123;</span><br><span class="line">    return ll(log10(sqrt(4*acos(0.0)*n))+n*log10(n/exp(1.0)))+1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDA0NS8xMDU4Mw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Jamence" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/p/1005055772753810/home?from=page_100505&mod=TAB#place" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/03/18/二分/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            二分
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/03/18/胡思乱想/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">胡思乱想</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/18/动态规划/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/04/18/动态规划/index.jpg)" alt="动态规划" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/04/18/动态规划/" class="title">动态规划</a></p>
+                            <p class="item-date"><time datetime="2018-04-18T14:24:58.000Z" itemprop="datePublished">2018-04-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/29/简单博弈/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/29/简单博弈/index.jpg)" alt="简单博弈" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/29/简单博弈/" class="title">简单博弈</a></p>
+                            <p class="item-date"><time datetime="2018-03-29T08:41:43.000Z" itemprop="datePublished">2018-03-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/29/线段树/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/29/线段树/index.jpg)" alt="线段树" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/29/线段树/" class="title">线段树</a></p>
+                            <p class="item-date"><time datetime="2018-03-29T08:41:26.000Z" itemprop="datePublished">2018-03-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/18/二分/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/18/二分/index.jpg)" alt="二分" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/18/二分/" class="title">二分</a></p>
+                            <p class="item-date"><time datetime="2018-03-18T13:51:54.000Z" itemprop="datePublished">2018-03-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/18/数论/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2018/03/18/数论/index.jpg)" alt="数论" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-title"><a href="/2018/03/18/数论/" class="title">数论</a></p>
+                            <p class="item-date"><time datetime="2018-03-18T13:14:47.000Z" itemprop="datePublished">2018-03-18</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/c/">c++</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lifes/">Lifes</a><span class="category-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">8</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/DP/" style="font-size: 10px;">DP</a> <a href="/tags/c-继承/" style="font-size: 20px;">c++继承</a> <a href="/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/tags/博弈/" style="font-size: 10px;">博弈</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/大数/" style="font-size: 10px;">大数</a> <a href="/tags/并查集/" style="font-size: 10px;">并查集</a> <a href="/tags/数论/" style="font-size: 10px;">数论</a> <a href="/tags/最小生成树/" style="font-size: 10px;">最小生成树</a> <a href="/tags/最短路/" style="font-size: 10px;">最短路</a> <a href="/tags/树形遍历/" style="font-size: 10px;">树形遍历</a> <a href="/tags/母函数/" style="font-size: 10px;">母函数</a> <a href="/tags/素数/" style="font-size: 10px;">素数</a> <a href="/tags/线段树/" style="font-size: 10px;">线段树</a> <a href="/tags/考研/" style="font-size: 10px;">考研</a> <a href="/tags/背包/" style="font-size: 10px;">背包</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://blog.csdn.net/Jamence">Jamence</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+	<nav>
+	　<!--这个外链由网易云音乐网页版提供，auto为0表示不自动播放，1表示自动播放，其他参数顾名思义-->
+	  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=29544830&auto=0&height=66"></iframe>
+	</nav>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Jamence</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+				<!--统计start-->
+					  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+					  </script>
+					  <span id="busuanzi_container_site_pv">
+					本站总访问量<span id="busuanzi_value_site_pv"></span>次
+				  </span>
+					  <span id="busuanzi_container_site_uv">
+				  总访客数<span id="busuanzi_value_site_uv"></span>人次
+				  </span>
+			   <!--统计end-->
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'Jamence';
+    
+    
+    var disqus_url = 'http://yoursite.com/2018/03/18/数论/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
